@@ -48,11 +48,11 @@ public abstract class User implements Observador{
         this.id = id;
     }
 
-    public abstract void formatearMensaje();
+    public abstract String formatearMensaje(String mensaje);
 
 
 
-    public void Actualizar(String mensaje){
+    public void actualizar(String mensaje) {
         String mensajeFormateado = formatearMensaje(mensaje);
         estrategia.enviarNotificacion("Notificacion", mensajeFormateado);
 

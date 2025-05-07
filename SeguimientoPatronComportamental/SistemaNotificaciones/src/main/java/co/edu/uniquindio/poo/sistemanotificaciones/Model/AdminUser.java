@@ -7,16 +7,9 @@ public class AdminUser extends User {
     }
 
     @Override
-    public void formatearMensaje() {
-
+    public String formatearMensaje(String mensaje) {
+        return "Admin: " + mensaje;
     }
-
-    @Override
-    protected String formatearMensaje(String mensaje) {
-        return "[ADMIN]" + mensaje.toUpperCase();
-
-    }
-
 
     @Override
     public void actualizar(String mensaje) {

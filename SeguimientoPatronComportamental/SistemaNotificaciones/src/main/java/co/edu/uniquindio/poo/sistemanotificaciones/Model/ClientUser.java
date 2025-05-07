@@ -8,8 +8,14 @@ public class ClientUser extends User{
     }
 
     @Override
-    public void formatearMensaje() {
-
+    public String formatearMensaje(String mensaje) {
+        return "Cliente: " + mensaje;
     }
+    @Override
+    public void actualizar(String mensaje) {
+        String mensajeFormateado = formatearMensaje(mensaje);
+        estrategia.enviarNotificacion("Notificación para Cliente", mensajeFormateado);
+    }
+
 
 }
