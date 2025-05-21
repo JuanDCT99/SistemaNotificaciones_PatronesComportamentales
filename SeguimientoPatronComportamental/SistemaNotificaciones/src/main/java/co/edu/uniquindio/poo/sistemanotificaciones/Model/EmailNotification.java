@@ -12,10 +12,8 @@ public class EmailNotification implements NotificationStrategy {
         System.out.println("Contenido: " + contenido);
         System.out.println("Email enviado correctamente.\n");
 
-        // En una implementación real, aquí se conectaría con un servicio SMTP
-        // Ejemplo: JavaMail API o servicios como SendGrid
 
-        // Registrar en el historial de notificaciones
+
         User usuarioActual = AppController.getInstance().getUsuarioActual();
         if (usuarioActual != null) {
             NotificationHistory.getInstance().addRecord(

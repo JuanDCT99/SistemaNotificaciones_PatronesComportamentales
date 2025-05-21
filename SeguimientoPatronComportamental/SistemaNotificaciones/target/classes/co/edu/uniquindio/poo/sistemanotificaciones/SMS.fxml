@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #ffd966;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.sistemanotificaciones.ViewController.SMS_ViewController">
+   <children>
+      <ImageView fx:id="imageUsuario" fitHeight="103.0" fitWidth="91.0" layoutX="255.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@Usuario.png.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtFieldEnviadoPor" layoutX="105.0" layoutY="163.0" />
+      <TextField fx:id="txtRecibidoPor" layoutX="346.0" layoutY="163.0" />
+      <Label layoutX="286.0" layoutY="167.0" text="----&gt;" />
+      <TextField fx:id="txtFieldSMSnotification" layoutX="105.0" layoutY="208.0" prefHeight="134.0" prefWidth="387.0" />
+      <Label fx:id="txtSendFor" layoutX="105.0" layoutY="140.0" text="Enviado de: " />
+      <Label fx:id="txtReciverFor" layoutX="346.0" layoutY="140.0" text="Recibido por:" />
+      <Button fx:id="btnEnviar" layoutX="105.0" layoutY="352.0" mnemonicParsing="false" onAction="#enviarSMS" style="-fx-background-color: #f5dad7;" text="Enviar SMS" />
+      <Button fx:id="btnVolver" layoutX="431.0" layoutY="352.0" mnemonicParsing="false" onAction="#volver" style="-fx-background-color: #f5dad7;" text="Volver" />
+   </children>
+</AnchorPane>

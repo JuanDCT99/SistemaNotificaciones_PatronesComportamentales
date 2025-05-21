@@ -12,10 +12,7 @@ public class PushNotification implements NotificationStrategy{
         System.out.println("Cuerpo: " + contenido);
         System.out.println("Notificación push enviada correctamente.\n");
 
-        // En una implementación real, aquí se conectaría con un servicio como
-        // Firebase Cloud Messaging, OneSignal, etc.
 
-        // Registrar en el historial de notificaciones
         User usuarioActual = AppController.getInstance().getUsuarioActual();
         if (usuarioActual != null) {
             NotificationHistory.getInstance().addRecord(

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #e6f2ff;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.sistemanotificaciones.ViewController.HistorialNotificacionesViewController">
+   <children>
+      <VBox layoutX="14.0" layoutY="14.0" prefHeight="472.0" prefWidth="672.0">
+         <children>
+            <Label alignment="CENTER" prefHeight="35.0" prefWidth="672.0" style="-fx-background-color: #b3d9ff;" text="Historial de Notificaciones">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </Label>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="672.0" spacing="10.0">
+               <children>
+                  <Label text="Filtrar por tipo:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ComboBox fx:id="comboTipoNotificacion" prefWidth="150.0" promptText="Todos" />
+                  <Button fx:id="btnFiltrar" mnemonicParsing="false" style="-fx-background-color: #b3d9ff;" text="Filtrar" />
+                  <Button fx:id="btnLimpiarFiltro" mnemonicParsing="false" style="-fx-background-color: #ffcccc;" text="Limpiar Filtro" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="tablaNotificaciones" prefHeight="330.0" prefWidth="672.0">
+              <columns>
+                <TableColumn fx:id="colFecha" prefWidth="150.0" text="Fecha" />
+                <TableColumn fx:id="colTipo" prefWidth="100.0" text="Tipo" />
+                <TableColumn fx:id="colAsunto" prefWidth="150.0" text="Asunto" />
+                <TableColumn fx:id="colContenido" prefWidth="271.0" text="Contenido" />
+              </columns>
+            </TableView>
+            <HBox alignment="CENTER" prefHeight="50.0" prefWidth="672.0" spacing="20.0">
+               <children>
+                  <Button fx:id="btnVolver" mnemonicParsing="false" style="-fx-background-color: #b3d9ff;" text="Volver al Menú Principal" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

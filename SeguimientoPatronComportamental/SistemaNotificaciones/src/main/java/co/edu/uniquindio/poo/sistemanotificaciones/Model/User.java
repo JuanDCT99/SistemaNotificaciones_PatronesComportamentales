@@ -6,6 +6,7 @@ public abstract class User implements Observador, Serializable {
     private static final long serialVersionUID = 1L;
 
     protected NotificationStrategy estrategia;
+    protected NotificationPreferences preferencias;
 
     private String nombre;
     private String email;
@@ -17,6 +18,8 @@ public abstract class User implements Observador, Serializable {
         this.email = email;
         this.telefono = telefono;
         this.id = id;
+        this.preferencias = new NotificationPreferences();
+        this.estrategia = this.preferencias.getNotificationStrategy();
     }
 
     public String getNombre() {
@@ -57,6 +60,21 @@ public abstract class User implements Observador, Serializable {
 
     public void setEstrategia(NotificationStrategy estrategia) {
         this.estrategia = estrategia;
+    }
+
+    public NotificationPreferences getPreferencias() {
+        return preferencias;
+    }
+
+    public void setPreferencias(NotificationPreferences preferencias) {
+        this.preferencias = preferencias;
+        this.estrategia = preferencias.getNotificationStrategy();
+    }
+
+    public void actualizarEstrategiaDesdePreferencias() {
+        if (this.preferencias != null) {
+            this.estrategia = this.preferencias.getNotificationStrategy();
+        }
     }
 
     public abstract String formatearMensaje(String mensaje);

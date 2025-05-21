@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #fce1c8;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="co.edu.uniquindio.poo.sistemanotificaciones.ViewController.informacionProgramaViewController">
+   <children>
+      <AnchorPane layoutX="16.0" layoutY="19.0" prefHeight="362.0" prefWidth="568.0" style="-fx-background-color: #f0f0bb;">
+         <children>
+            <Button fx:id="BtnSMS" layoutX="291.0" layoutY="260.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="52.0" text="SMS" />
+            <ImageView fx:id="imageSMS" fitHeight="81.0" fitWidth="81.0" layoutX="276.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@SMS.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnMoreInfo" layoutX="462.0" layoutY="335.0" mnemonicParsing="false" style="-fx-background-color: #fce1 #f0f0bbc8;" text="Mas Información" />
+            <ImageView fx:id="imageUser" fitHeight="150.0" fitWidth="200.0" layoutX="44.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Usuario.png.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="btnInicioSesion_Registro" layoutX="54.0" layoutY="273.0" mnemonicParsing="false" style="-fx-background-color: #fce1c8;" text="Registro/Inicio Sesión" />
+            <Label fx:id="txtSeleccionar" layoutX="288.0" layoutY="43.0" text="Seleccione el canal de notificación apropiado">
+               <font>
+                  <Font name="Segoe UI Semibold" size="13.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnEmail" layoutX="395.0" layoutY="154.0" mnemonicParsing="false" text="Email" />
+            <Button fx:id="btnPush" layoutX="496.0" layoutY="263.0" mnemonicParsing="false" text="Push" />
+            <ImageView fx:id="imageEmail" fitHeight="81.0" fitWidth="105.0" layoutX="377.0" layoutY="71.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Email.png" />
+               </image>
+            </ImageView>
+            <ImageView fx:id="imagePush" fitHeight="81.0" fitWidth="107.0" layoutX="474.0" layoutY="181.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@Push.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="lblUsuarioActual" layoutX="54.0" layoutY="43.0" text="No hay usuario conectado">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnEnviarNotificacionATodos" layoutX="54.0" layoutY="322.0" mnemonicParsing="false" style="-fx-background-color: #fce1c8;" text="Enviar Notificación a Todos" />
+            <Button fx:id="btnVerHistorial" layoutX="268.0" layoutY="323.0" mnemonicParsing="false" style="-fx-background-color: #fce1c8;" text="Ver Historial de Notificaciones" />
+            <Button fx:id="btnConfiguracion" layoutX="263.0" layoutY="295.0" mnemonicParsing="false" style="-fx-background-color: #fce1c8;" text="Configuración de Notificaciones" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
