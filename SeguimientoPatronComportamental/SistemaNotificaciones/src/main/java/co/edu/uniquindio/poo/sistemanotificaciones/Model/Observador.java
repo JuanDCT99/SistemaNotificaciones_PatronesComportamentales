@@ -1,6 +1,8 @@
 package co.edu.uniquindio.poo.sistemanotificaciones.Model;
 
-public interface Observador {
+import java.io.Serializable;
+
+public interface Observador extends Serializable {
 
     public void actualizar(String mensaje);
 

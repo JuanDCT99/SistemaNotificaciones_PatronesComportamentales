@@ -13,6 +13,11 @@ public class AdminUser extends User {
 
     @Override
     public void actualizar(String mensaje) {
-
+        String mensajeFormateado = formatearMensaje(mensaje);
+        if (estrategia != null) {
+            estrategia.enviarNotificacion("Notificación para Administrador", mensajeFormateado);
+        } else {
+            System.out.println("No se ha configurado una estrategia de notificación para el administrador.");
+        }
     }
 }

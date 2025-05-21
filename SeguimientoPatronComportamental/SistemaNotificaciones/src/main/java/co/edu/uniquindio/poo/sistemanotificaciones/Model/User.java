@@ -1,6 +1,9 @@
 package co.edu.uniquindio.poo.sistemanotificaciones.Model;
 
-public abstract class User implements Observador{
+import java.io.Serializable;
+
+public abstract class User implements Observador, Serializable {
+    private static final long serialVersionUID = 1L;
 
     protected NotificationStrategy estrategia;
 
@@ -46,6 +49,14 @@ public abstract class User implements Observador{
 
     public void setId(String id) {
         this.id = id;
+    }
+
+    public NotificationStrategy getEstrategia() {
+        return estrategia;
+    }
+
+    public void setEstrategia(NotificationStrategy estrategia) {
+        this.estrategia = estrategia;
     }
 
     public abstract String formatearMensaje(String mensaje);
